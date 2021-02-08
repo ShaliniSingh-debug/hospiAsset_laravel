@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cmsEquipmentCallLog');
 });
+Route::get('/cmsCallLog',[cmsLogController::class,'callLog'])->name('cmsCallDetails');
