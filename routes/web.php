@@ -17,4 +17,4 @@ use App\Http\Controllers\cmsLogController;
 Route::get('/', function () {
     return view('cms.cmsEquipmentCallLog');
 });
-Route::get('/cmsCallLog',[cmsLogController::class,'callLog'])->name('cmsCallDetails');
+// Route::get('/cmsCallLog',[cmsLogController::class,'callLog'])->name('cmsCallDetails');

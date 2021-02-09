@@ -15,20 +15,20 @@ class CreateHspTblCmsTable extends Migration
     {
         Schema::create('hsp_tbl_cms', function (Blueprint $table) {
             $table->increments('CMS_ID');
-            $table->string('ORG_ID',100)->unique();
-            $table->string('BRANCH_ID',100)->unique();
+            $table->string('ORG_ID',100);
+            $table->string('BRANCH_ID',100);
             $table->string('RAISED_BY',50);
-            $table->string('DEVICE_ID',100)->unique();
-            $table->string('CALL_TYPE',100)->nullable();
-            $table->string('STATUS',100)->nullable();
-            $table->dateTime('CREATED_DATE')->format('d.m.Y');
-            $table->dateTime('UPDATED_DATE')->format('d.m.Y');
-            $table->date('JOBCOMPLETED_DATE')->format('d.m.Y');
-            $table->time('JOBCOMPLETED_TIME');
+            $table->string('DEVICE_ID',100);
+            $table->string('CALL_TYPE',100);
+            $table->string('STATUS',100);
+            $table->dateTime('CREATED_DATE');
+            $table->dateTime('UPDATED_DATE')->nullable();
+            $table->date('JOBCOMPLETED_DATE')->nullable();
+            $table->time('JOBCOMPLETED_TIME')->nullable();
             $table->text('ACTION_TAKEN',1000)->nullable();
-            $table->string('COMPLETED_BY',100);
-            $table->string('PARTS_CHANGE',100);
-            $table->integer('DOWN_TIME')->unsigned();
+            $table->string('COMPLETED_BY',100)->nullable();
+            $table->string('PARTS_CHANGE',100)->nullable();
+            $table->integer('DOWN_TIME')->unsigned()->nullable();
             $table->timestamps();
         });
     
