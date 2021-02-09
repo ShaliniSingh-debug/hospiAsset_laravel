@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class cmsLogController extends Controller
 {
-    //
+    public function callLog()
+    {
+        echo "hi";
+    }
 }
