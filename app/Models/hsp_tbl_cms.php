@@ -10,4 +10,5 @@ class hsp_tbl_cms extends Model
     use HasFactory;
     protected $dateFormat = 'Y-m-d';
     public $timestamps=false;
+    protected $table="hsp_tbl_cms";
 }
