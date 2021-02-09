@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class testController extends Controller
 {
-    //
+    public function callLog()
+    {
+        echo "hi";
+    }
 }
