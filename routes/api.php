@@ -17,4 +17,4 @@ use App\Http\Controllers\hspCmsController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post("cmsCall",[hspCmsController::class,"cmsAdd"]);
+Route::post('cmsCall',[hspCmsController::class,'cmsAdd']);

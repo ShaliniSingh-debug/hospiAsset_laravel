@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\hsp_tbl_cms;
+
 class hspCmsController extends Controller
 {
     //
-    function cmsAdd(Request $req){
+  public function cmsAdd(Request $req){
 
         $validated = $request->validate([
             'ORG_ID' => 'required|unique:posts|max:255',
